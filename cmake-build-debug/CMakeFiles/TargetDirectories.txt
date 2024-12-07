@@ -1,3 +1,3 @@
-E:/lanzer-github/proj2/cmake-build-debug/CMakeFiles/proj2.elf.dir
-E:/lanzer-github/proj2/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/lanzer-github/proj2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+E:/lanzer-github/RoboBall2025/cmake-build-debug/CMakeFiles/proj2.elf.dir
+E:/lanzer-github/RoboBall2025/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/lanzer-github/RoboBall2025/cmake-build-debug/CMakeFiles/rebuild_cache.dir

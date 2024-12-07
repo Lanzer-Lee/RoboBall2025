@@ -163,7 +163,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "e:/lanzer-github/proj2/cmake-build-debug"
+			"value" : "e:/lanzer-github/RoboBall2025/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -619,7 +619,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/lanzer-github/proj2/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "E:/lanzer-github/RoboBall2025/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -679,7 +679,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "E:/lanzer-github/proj2"
+			"value" : "E:/lanzer-github/RoboBall2025"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1171,7 +1171,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/lanzer-github/proj2/cmake-build-debug"
+			"value" : "E:/lanzer-github/RoboBall2025/cmake-build-debug"
 		},
 		{
 			"name" : "proj2_IS_TOP_LEVEL",
@@ -1195,7 +1195,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/lanzer-github/proj2"
+			"value" : "E:/lanzer-github/RoboBall2025"
 		}
 	],
 	"kind" : "cache",

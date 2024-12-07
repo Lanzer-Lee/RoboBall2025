@@ -29,7 +29,9 @@ extern "C" {
 #include "main.h"
 
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
+#include <stdarg.h>
+#include <string.h>
 /* USER CODE END Includes */
 
 extern UART_HandleTypeDef huart7;
@@ -69,7 +71,8 @@ void MX_USART6_UART_Init(void);
 
 /* USER CODE BEGIN Prototypes */
 void UART_InterruptionInit(void);
-void UART_TransmitString(UART_HandleTypeDef* uartHandle, uint8_t* str);
+void UART_TransmitString(UART_HandleTypeDef *uartHandle, char *format, ...);
+void UART_TransmitData(UART_HandleTypeDef *uartHandle, uint8_t *data, uint16_t len);
 void UART_Service(void);
 /* USER CODE END Prototypes */
 

@@ -1227,8 +1227,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "E:/lanzer-github/proj2/cmake-build-debug",
-		"source" : "E:/lanzer-github/proj2"
+		"build" : "E:/lanzer-github/RoboBall2025/cmake-build-debug",
+		"source" : "E:/lanzer-github/RoboBall2025"
 	},
 	"version" : 
 	{
