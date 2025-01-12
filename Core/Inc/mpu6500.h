@@ -141,8 +141,9 @@
 #define MPU_NSS_LOW HAL_GPIO_WritePin(GPIOF, GPIO_PIN_6, GPIO_PIN_RESET)
 #define MPU_NSS_HIGH HAL_GPIO_WritePin(GPIOF, GPIO_PIN_6, GPIO_PIN_SET)
 
-#define Kp 2.0f
-#define Ki 0.01f
+#define MPU_Kp (2.0f)
+#define MPU_Ki (0.01f)
+
 
 typedef struct
 {
@@ -197,3 +198,4 @@ void MPU_Update(void);
 
 
 #endif //PROJ2_MPU6500_H
+

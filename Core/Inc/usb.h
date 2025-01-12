@@ -13,6 +13,7 @@
 #include "usart.h"
 #include "mpu6500.h"
 #include "wit.h"
+#include "Motor.h"
 
 #define USB_BUFFER_SIZE  200
 #define CDC_POLLING_INTERVAL    1

@@ -583,13 +583,13 @@ void MPU_ImuAhrsUpdate(void)
     /* PI */
     if(ex != 0.0f && ey != 0.0f && ez != 0.0f)
     {
-        exInt = exInt + ex * Ki * halfT;
-        eyInt = eyInt + ey * Ki * halfT;
-        ezInt = ezInt + ez * Ki * halfT;
+        exInt = exInt + ex * MPU_Ki * halfT;
+        eyInt = eyInt + ey * MPU_Ki * halfT;
+        ezInt = ezInt + ez * MPU_Ki * halfT;
 
-        gx = gx + Kp*ex + exInt;
-        gy = gy + Kp*ey + eyInt;
-        gz = gz + Kp*ez + ezInt;
+        gx = gx + MPU_Kp * ex + exInt;
+        gy = gy + MPU_Kp * ey + eyInt;
+        gz = gz + MPU_Kp * ez + ezInt;
     }
 
     tempq0 = q0 + (-q1*gx - q2*gy - q3*gz) * halfT;

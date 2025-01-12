@@ -66,12 +66,17 @@ void USB_TransmitString(char *format, ...) {
   */
 void USB_Service(void) {
     if (usb.state == UART_STATE_BUSY) {
-        USB_TransmitData(usb.receive_buffer, sizeof(usb.receive_buffer));
         if (strcmp((const char *) (usb.receive_buffer), "(MPU)") == 0) {
             USB_TransmitString("Roll: %8.3lf\tPitch: %8.3lf\tYaw: %8.3lf\r\n", mpu_imu.rol, mpu_imu.pit, mpu_imu.yaw);
         } else if (strcmp((const char *) (usb.receive_buffer), "(WIT)") == 0) {
-            WIT_ReadData(&wit_imu);
             USB_TransmitString("Roll:%.3f\tPit:%.3f\tYaw:%.3f", wit_imu.angle[0], wit_imu.angle[1], wit_imu.angle[2]);
+        } else if (usb.receive_buffer[1] == 'M') {
+            int current[4];
+            sscanf((const char *) (usb.receive_buffer), "(M,%d,%d,%d,%d)", current, current + 1, current + 2,
+                   current + 3);
+            CAN1_cmd((int16_t) (current[0]), (int16_t) (current[1]), (int16_t) (current[2]),
+                          (int16_t) (current[3]));
+            USB_TransmitString("Motor velocity: %d, %d, %d, %d", current[0], current[1], current[2], current[3]);
         }
         usb.state = UART_STATE_IDLE;
     }
