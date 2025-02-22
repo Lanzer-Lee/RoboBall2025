@@ -7,28 +7,43 @@ from typing import Literal
 class LinearControlNode(Node):
     def __init__(self, node_name: str):
         super().__init__(node_name)
-        self.target_linear_velocity: float = 0.0
+        self.control_value: float = self.declare_parameter("control_value", 0.0).value
+        self.mode: Literal["velocity", "effort"] = self.declare_parameter("control_mode", "velocity").value
+        self.joint_state = JointState()
+        self.joint_state.name = ["motor_1", "motor_2", "motor_3", "motor_4"]
         self.direction: Literal["forward", "backward", "left", "right"] = "forward"
-        self.publisher = self.create_publisher(JointState, 'target_linear_velocity', 10)
+        self.publisher = self.create_publisher(JointState, 'control_value', 10)
         self.timer = self.create_timer(0.025, self.timer_callback)
 
     def timer_callback(self):
-        joint_state = JointState()
-        joint_state.name = ["motor_1", "motor_2", "motor_3", "motor_4"]
-        if self.direction == "forward":
-            joint_state.velocity = [self.target_linear_velocity, self.target_linear_velocity, self.target_linear_velocity, self.target_linear_velocity]
-        elif self.direction == "backward":
-            joint_state.velocity = [-self.target_linear_velocity, -self.target_linear_velocity, -self.target_linear_velocity, -self.target_linear_velocity]
-        elif self.direction == "left":
-            joint_state.velocity = [-self.target_linear_velocity, self.target_linear_velocity, -self.target_linear_velocity, self.target_linear_velocity]
-        elif self.direction == "right":
-            joint_state.velocity = [self.target_linear_velocity, -self.target_linear_velocity, self.target_linear_velocity, -self.target_linear_velocity]
-        self.publisher.publish(joint_state)
-        self.get_logger().info(f"Publishing: {joint_state.velocity}")
-        self.simulate()
+        self.control_value = self.get_parameter("control_value").value
+        self.mode = self.get_parameter("control_mode").value
+        if self.mode == "velocity":
+            self.joint_state.header.frame_id = "velocity"
+            if self.direction == "forward":
+                self.joint_state.velocity = [self.control_value, self.control_value, self.control_value, self.control_value]
+            elif self.direction == "backward":
+                self.joint_state.velocity = [-self.control_value, -self.control_value, -self.control_value, -self.control_value]
+            elif self.direction == "left":
+                self.joint_state.velocity = [-self.control_value, self.control_value, -self.control_value, self.control_value]
+            elif self.direction == "right":
+                self.joint_state.velocity = [self.control_value, -self.control_value, self.control_value, -self.control_value]
+            self.get_logger().info(f"Publish velocity: {self.joint_state.velocity}")
+        elif self.mode == "effort":
+            self.joint_state.header.frame_id = "effort"
+            if self.direction == "forward":
+                self.joint_state.effort = [self.control_value, self.control_value, self.control_value, self.control_value]
+            elif self.direction == "backward":
+                self.joint_state.effort = [-self.control_value, -self.control_value, -self.control_value, -self.control_value]
+            elif self.direction == "left":
+                self.joint_state.effort = [-self.control_value, self.control_value, -self.control_value, self.control_value]
+            elif self.direction == "right":
+                self.joint_state.effort = [self.control_value, -self.control_value, self.control_value, -self.control_value]
+            self.get_logger().info(f"Publish effort: {self.joint_state.effort}")
+        self.publisher.publish(self.joint_state)
 
     def simulate(self):
-        self.target_linear_velocity += 1.0
+        pass
 
 def main(args=None):
     rclpy.init(args=args)

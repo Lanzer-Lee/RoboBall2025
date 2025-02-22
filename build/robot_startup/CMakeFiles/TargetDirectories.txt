@@ -1,0 +1,9 @@
+/home/lanzer/robocup/basketball_ws/build/robot_startup/CMakeFiles/uninstall.dir
+/home/lanzer/robocup/basketball_ws/build/robot_startup/CMakeFiles/robot_startup_uninstall.dir
+/home/lanzer/robocup/basketball_ws/build/robot_startup/CMakeFiles/test.dir
+/home/lanzer/robocup/basketball_ws/build/robot_startup/CMakeFiles/edit_cache.dir
+/home/lanzer/robocup/basketball_ws/build/robot_startup/CMakeFiles/rebuild_cache.dir
+/home/lanzer/robocup/basketball_ws/build/robot_startup/CMakeFiles/list_install_components.dir
+/home/lanzer/robocup/basketball_ws/build/robot_startup/CMakeFiles/install.dir
+/home/lanzer/robocup/basketball_ws/build/robot_startup/CMakeFiles/install/local.dir
+/home/lanzer/robocup/basketball_ws/build/robot_startup/CMakeFiles/install/strip.dir
