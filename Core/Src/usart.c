@@ -39,7 +39,7 @@ UART_HandleTypeDef huart3;
 UART_HandleTypeDef huart6;
 
 
-int integer_data_buffer[4];
+int integer_data_buffer[5];
 
 /* UART7 init function */
 void MX_UART7_Init(void)
@@ -478,16 +478,26 @@ void UART_Service(void) {
     if (uart2_buffer.state == UART_STATE_BUSY) {
         sscanf(
             (const char*)(uart2_buffer.buffer),
-            "[%d,%d,%d,%d]",
+            "[%d,%d,%d,%d,%d]",
             integer_data_buffer + 0,
             integer_data_buffer + 1,
             integer_data_buffer + 2,
-            integer_data_buffer + 3
+            integer_data_buffer + 3,
+            integer_data_buffer + 4
         );
-        motors[0].target_speed = (int16_t)integer_data_buffer[0];
-        motors[1].target_speed = (int16_t)integer_data_buffer[1];
-        motors[2].target_speed = (int16_t)integer_data_buffer[2];
-        motors[3].target_speed = (int16_t)integer_data_buffer[3];
+        if (integer_data_buffer[0] == CURRENT_FLAG) {
+            motors[0].given_current = (int16_t)integer_data_buffer[1];
+            motors[1].given_current = (int16_t)integer_data_buffer[2];
+            motors[2].given_current = (int16_t)integer_data_buffer[3];
+            motors[3].given_current = (int16_t)integer_data_buffer[4];
+            set_motor_current(motors[0].given_current, motors[1].given_current, motors[2].given_current, motors[3].given_current);
+        }
+        else if (integer_data_buffer[0] == SPEED_FLAG) {
+            motors[0].target_speed = (int16_t)integer_data_buffer[1];
+            motors[1].target_speed = (int16_t)integer_data_buffer[2];
+            motors[2].target_speed = (int16_t)integer_data_buffer[3];
+            motors[3].target_speed = (int16_t)integer_data_buffer[4];
+        }
         uart2_buffer.state = UART_STATE_IDLE;
     }
     /*

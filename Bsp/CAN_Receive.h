@@ -45,10 +45,10 @@ typedef enum {
 
 typedef struct
 {
-    int16_t speed_rpm;
-    int16_t target_speed;
-    float real_current;
-    int16_t given_current;
+    int16_t speed_rpm;      // observed speed
+    int16_t target_speed;   // target speed of PID
+    float real_current;     // observed current
+    int16_t given_current;  // current calculated by PID
     uint16_t ecd;           // abs angle range: [0, 8191]
     uint16_t last_ecd;      // abs angle range: [0, 8191]
     uint16_t offset_ecd;

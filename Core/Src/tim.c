@@ -104,7 +104,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
     if (htim->Instance == TIM6)
     {
-        static uint16_t cnt = 0;
+        static uint8_t cnt = 0;
         UART_Service();
         cnt = (cnt + 1) % 2;
         UART_TransmitString(

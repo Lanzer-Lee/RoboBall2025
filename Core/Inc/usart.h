@@ -50,6 +50,11 @@ extern UART_HandleTypeDef huart6;
 #define UART_BUFFER_SIZE   200
 #define UART_STATE_IDLE     0
 #define UART_STATE_BUSY     255
+
+#define CURRENT_FLAG    0
+#define SPEED_FLAG      1
+
+
 typedef struct
 {
     uint8_t buffer[UART_BUFFER_SIZE];
