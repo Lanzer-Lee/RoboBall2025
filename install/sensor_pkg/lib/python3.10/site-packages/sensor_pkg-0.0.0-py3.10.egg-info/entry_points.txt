@@ -1,0 +1,4 @@
+[console_scripts]
+camera_node = sensor_pkg.camera_node:main
+imu_node = sensor_pkg.imu_node:main
+

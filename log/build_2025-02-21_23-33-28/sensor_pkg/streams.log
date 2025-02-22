@@ -1,0 +1,23 @@
+[2.461s] Invoking command in '/home/lanzer/robocup/basketball_ws/src/sensor_pkg': CONDA_PROMPT_MODIFIER=(robot) PYTHONPATH=/home/lanzer/robocup/basketball_ws/build/sensor_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lanzer/robocup/basketball_ws/install/sensor_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sensor_pkg build --build-base /home/lanzer/robocup/basketball_ws/build/sensor_pkg/build install --record /home/lanzer/robocup/basketball_ws/build/sensor_pkg/install.log --single-version-externally-managed install_data
+[2.940s] running egg_info
+[2.942s] writing ../../build/sensor_pkg/sensor_pkg.egg-info/PKG-INFO
+[2.942s] writing dependency_links to ../../build/sensor_pkg/sensor_pkg.egg-info/dependency_links.txt
+[2.944s] writing entry points to ../../build/sensor_pkg/sensor_pkg.egg-info/entry_points.txt
+[2.944s] writing requirements to ../../build/sensor_pkg/sensor_pkg.egg-info/requires.txt
+[2.945s] writing top-level names to ../../build/sensor_pkg/sensor_pkg.egg-info/top_level.txt
+[2.948s] reading manifest file '../../build/sensor_pkg/sensor_pkg.egg-info/SOURCES.txt'
+[2.949s] adding license file 'LICENSE'
+[2.952s] writing manifest file '../../build/sensor_pkg/sensor_pkg.egg-info/SOURCES.txt'
+[2.952s] running build
+[2.952s] running build_py
+[2.952s] running install
+[2.953s] running install_lib
+[2.955s] running install_data
+[2.956s] running install_egg_info
+[2.959s] removing '/home/lanzer/robocup/basketball_ws/install/sensor_pkg/lib/python3.10/site-packages/sensor_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[2.960s] Copying ../../build/sensor_pkg/sensor_pkg.egg-info to /home/lanzer/robocup/basketball_ws/install/sensor_pkg/lib/python3.10/site-packages/sensor_pkg-0.0.0-py3.10.egg-info
+[2.963s] running install_scripts
+[3.010s] Installing camera_node script to /home/lanzer/robocup/basketball_ws/install/sensor_pkg/lib/sensor_pkg
+[3.010s] Installing imu_node script to /home/lanzer/robocup/basketball_ws/install/sensor_pkg/lib/sensor_pkg
+[3.011s] writing list of installed files to '/home/lanzer/robocup/basketball_ws/build/sensor_pkg/install.log'
+[3.054s] Invoked command in '/home/lanzer/robocup/basketball_ws/src/sensor_pkg' returned '0': CONDA_PROMPT_MODIFIER=(robot) PYTHONPATH=/home/lanzer/robocup/basketball_ws/build/sensor_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lanzer/robocup/basketball_ws/install/sensor_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sensor_pkg build --build-base /home/lanzer/robocup/basketball_ws/build/sensor_pkg/build install --record /home/lanzer/robocup/basketball_ws/build/sensor_pkg/install.log --single-version-externally-managed install_data

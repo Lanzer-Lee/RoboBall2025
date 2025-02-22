@@ -1,0 +1,4 @@
+[console_scripts]
+linear_control_node = control_pkg.linear_control_node:main
+position_control_node = control_pkg.position_control_node:main
+

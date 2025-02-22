@@ -1,0 +1,25 @@
+[1.175s] Invoking command in '/home/lanzer/robocup/basketball_ws/src/board_pkg': CONDA_PROMPT_MODIFIER=(robot) PYTHONPATH=/home/lanzer/robocup/basketball_ws/build/board_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lanzer/robocup/basketball_ws/install/board_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/board_pkg build --build-base /home/lanzer/robocup/basketball_ws/build/board_pkg/build install --record /home/lanzer/robocup/basketball_ws/build/board_pkg/install.log --single-version-externally-managed install_data
+[1.377s] running egg_info
+[1.378s] writing ../../build/board_pkg/board_pkg.egg-info/PKG-INFO
+[1.378s] writing dependency_links to ../../build/board_pkg/board_pkg.egg-info/dependency_links.txt
+[1.379s] writing entry points to ../../build/board_pkg/board_pkg.egg-info/entry_points.txt
+[1.379s] writing requirements to ../../build/board_pkg/board_pkg.egg-info/requires.txt
+[1.379s] writing top-level names to ../../build/board_pkg/board_pkg.egg-info/top_level.txt
+[1.380s] reading manifest file '../../build/board_pkg/board_pkg.egg-info/SOURCES.txt'
+[1.381s] adding license file 'LICENSE'
+[1.382s] writing manifest file '../../build/board_pkg/board_pkg.egg-info/SOURCES.txt'
+[1.382s] running build
+[1.382s] running build_py
+[1.382s] copying board_pkg/serial_node.py -> /home/lanzer/robocup/basketball_ws/build/board_pkg/build/lib/board_pkg
+[1.383s] running install
+[1.383s] running install_lib
+[1.384s] copying /home/lanzer/robocup/basketball_ws/build/board_pkg/build/lib/board_pkg/serial_node.py -> /home/lanzer/robocup/basketball_ws/install/board_pkg/lib/python3.10/site-packages/board_pkg
+[1.385s] byte-compiling /home/lanzer/robocup/basketball_ws/install/board_pkg/lib/python3.10/site-packages/board_pkg/serial_node.py to serial_node.cpython-310.pyc
+[1.386s] running install_data
+[1.386s] running install_egg_info
+[1.387s] removing '/home/lanzer/robocup/basketball_ws/install/board_pkg/lib/python3.10/site-packages/board_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[1.388s] Copying ../../build/board_pkg/board_pkg.egg-info to /home/lanzer/robocup/basketball_ws/install/board_pkg/lib/python3.10/site-packages/board_pkg-0.0.0-py3.10.egg-info
+[1.390s] running install_scripts
+[1.406s] Installing serial_node script to /home/lanzer/robocup/basketball_ws/install/board_pkg/lib/board_pkg
+[1.406s] writing list of installed files to '/home/lanzer/robocup/basketball_ws/build/board_pkg/install.log'
+[1.455s] Invoked command in '/home/lanzer/robocup/basketball_ws/src/board_pkg' returned '0': CONDA_PROMPT_MODIFIER=(robot) PYTHONPATH=/home/lanzer/robocup/basketball_ws/build/board_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lanzer/robocup/basketball_ws/install/board_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/board_pkg build --build-base /home/lanzer/robocup/basketball_ws/build/board_pkg/build install --record /home/lanzer/robocup/basketball_ws/build/board_pkg/install.log --single-version-externally-managed install_data
