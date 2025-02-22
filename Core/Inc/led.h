@@ -16,5 +16,6 @@ extern LED_TypeDef led_green[];
 
 void LED_Off(LED_TypeDef* led);
 void LED_On(LED_TypeDef* LED);
+void LED_Reverse(LED_TypeDef* led);
 
 #endif //PROJ2_LED_H

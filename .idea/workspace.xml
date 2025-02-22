@@ -20,62 +20,61 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0921be81-4283-4c41-97e4-161dbd62c4d0" name="更改" comment="update IMU and USB">
-      <change afterPath="$PROJECT_DIR$/Bsp/CAN_Receive.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bsp/CAN_Receive.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bsp/Motor.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bsp/Motor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bsp/pid.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bsp/pid.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Inc/can.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Src/can.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cproject" beforeDir="false" afterPath="$PROJECT_DIR$/.cproject" afterDir="false" />
+    <list default="true" id="0921be81-4283-4c41-97e4-161dbd62c4d0" name="更改" comment="update Motor and PID">
+      <change afterPath="$PROJECT_DIR$/.idea/MarsCodeWorkspaceAppSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Inc/tim.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Src/tim.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.mxproject" beforeDir="false" afterPath="$PROJECT_DIR$/.mxproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bsp/CAN_Receive.c" beforeDir="false" afterPath="$PROJECT_DIR$/Bsp/CAN_Receive.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bsp/CAN_Receive.h" beforeDir="false" afterPath="$PROJECT_DIR$/Bsp/CAN_Receive.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bsp/Motor.c" beforeDir="false" afterPath="$PROJECT_DIR$/Bsp/Motor.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bsp/Motor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Bsp/Motor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bsp/pid.c" beforeDir="false" afterPath="$PROJECT_DIR$/Bsp/pid.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bsp/pid.h" beforeDir="false" afterPath="$PROJECT_DIR$/Bsp/pid.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/mpu6500.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/mpu6500.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/led.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/led.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Inc/stm32f4xx_hal_conf.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/stm32f4xx_hal_conf.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Inc/stm32f4xx_it.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/stm32f4xx_it.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/usb.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/usb.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/usart.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/usart.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/led.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/led.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/mpu6500.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/mpu6500.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/stm32f4xx_it.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/stm32f4xx_it.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/usart.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/usart.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/usb.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/usb.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RoboBall.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/RoboBall.ioc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-81320d92f2c35740e33e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-1b489c1b6d20d5f91aed.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-12-06T15-36-35-0316.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-proj2.elf-Debug-2297811871504ebaefab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-75ef4e6b9050d071821c.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Bsp/CAN_Receive.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Bsp/CAN_Receive.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Bsp/Motor.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Bsp/Motor.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Bsp/pid.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Bsp/pid.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Core/Src/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Core/Src/mpu6500.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Core/Src/mpu6500.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Core/Src/stm32f4xx_it.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Core/Src/stm32f4xx_it.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Core/Src/usart.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Core/Src/usart.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Core/Src/usb.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Core/Src/usb.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Core/Src/wit.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Core/Src/wit.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/USB_DEVICE/App/usb_device.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/USB_DEVICE/App/usb_device.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/USB_DEVICE/App/usbd_desc.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/USB_DEVICE/App/usbd_desc.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/proj2.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/proj2.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/proj2.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/proj2.elf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/proj2.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/proj2.hex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/proj2.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/proj2.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stm32f412g-disco.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/stm32f412g-disco.cfg" afterDir="false" />
     </list>
-    <list id="61a78e77-d378-4f4c-9c18-dacb01bf5c6c" name="王浩宇 进行的更改" comment="">
-      <change beforePath="$PROJECT_DIR$/CMakeLists_template.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists_template.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-    </list>
+    <list id="61a78e77-d378-4f4c-9c18-dacb01bf5c6c" name="王浩宇 进行的更改" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,25 +92,13 @@
         <option name="title" value="Current Branch" />
       </GitPushTagMode>
     </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/Core/Src/main.c">
-      <ranges>
-        <range start1="20" end1="20" start2="20" end2="21" changelist="0921be81-4283-4c41-97e4-161dbd62c4d0" />
-        <range start1="31" end1="31" start2="32" end2="35" changelist="61a78e77-d378-4f4c-9c18-dacb01bf5c6c" />
-        <range start1="100" end1="100" start2="104" end2="105" changelist="0921be81-4283-4c41-97e4-161dbd62c4d0" />
-        <range start1="121" end1="122" start2="126" end2="127" changelist="0921be81-4283-4c41-97e4-161dbd62c4d0" />
-        <range start1="124" end1="124" start2="129" end2="137" changelist="61a78e77-d378-4f4c-9c18-dacb01bf5c6c" />
-        <range start1="135" end1="136" start2="148" end2="148" changelist="0921be81-4283-4c41-97e4-161dbd62c4d0" />
-        <range start1="152" end1="153" start2="164" end2="165" changelist="0921be81-4283-4c41-97e4-161dbd62c4d0" />
-        <range start1="162" end1="163" start2="174" end2="175" changelist="0921be81-4283-4c41-97e4-161dbd62c4d0" />
-        <range start1="164" end1="165" start2="176" end2="177" changelist="0921be81-4283-4c41-97e4-161dbd62c4d0" />
-        <range start1="176" end1="178" start2="188" end2="190" changelist="0921be81-4283-4c41-97e4-161dbd62c4d0" />
-        <range start1="179" end1="180" start2="191" end2="192" changelist="0921be81-4283-4c41-97e4-161dbd62c4d0" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -131,28 +118,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;OpenOCD 下载并运行.proj2.elf.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/lanzer-github/RoboBall2025-main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CodeWithMe&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "OpenOCD 下载并运行.proj2.elf.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "latest",
+    "last_opened_file_path": "E:/lanzer-github/RoboBall2025-main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\lanzer-github\RoboBall2025\Core\Src" />
@@ -161,11 +148,6 @@
     </key>
   </component>
   <component name="RunManager" selected="OpenOCD 下载并运行.proj2.elf">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="proj2.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="proj2" TARGET_NAME="proj2.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="proj2" RUN_TARGET_NAME="proj2.elf">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -188,7 +170,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="CMake Application.proj2.elf" />
+      <item itemvalue="CMake 应用程序.proj2.elf" />
       <item itemvalue="OpenOCD 下载并运行.OCD proj2" />
       <item itemvalue="OpenOCD 下载并运行.proj2.elf" />
     </list>
@@ -222,6 +204,12 @@
       <workItem from="1736584088908" duration="3433000" />
       <workItem from="1736656254659" duration="7726000" />
       <workItem from="1736686058060" duration="3041000" />
+      <workItem from="1737165486948" duration="73000" />
+      <workItem from="1740062029071" duration="806000" />
+      <workItem from="1740062901441" duration="659000" />
+      <workItem from="1740105892375" duration="3720000" />
+      <workItem from="1740124799340" duration="12776000" />
+      <workItem from="1740190397668" duration="4121000" />
     </task>
     <task id="LOCAL-00001" summary="update IMU and USB">
       <option name="closed" value="true" />
@@ -231,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733559367699</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update Motor and PID">
+      <option name="closed" value="true" />
+      <created>1736815344689</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1736815344689</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +252,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update IMU and USB" />
-    <option name="LAST_COMMIT_MESSAGE" value="update IMU and USB" />
+    <MESSAGE value="update Motor and PID" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Motor and PID" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

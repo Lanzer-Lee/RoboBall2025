@@ -25,10 +25,10 @@
 
 /* USER CODE BEGIN 0 */
 UART_BufferTypeDef uart2_buffer = {.state = UART_STATE_IDLE};
-UART_BufferTypeDef uart3_buffer = {.state = UART_STATE_IDLE};
-UART_BufferTypeDef uart6_buffer = {.state = UART_STATE_IDLE};
-UART_BufferTypeDef uart7_buffer = {.state = UART_STATE_IDLE};
-UART_BufferTypeDef uart8_buffer = {.state = UART_STATE_IDLE};
+//UART_BufferTypeDef uart3_buffer = {.state = UART_STATE_IDLE};
+//UART_BufferTypeDef uart6_buffer = {.state = UART_STATE_IDLE};
+//UART_BufferTypeDef uart7_buffer = {.state = UART_STATE_IDLE};
+//UART_BufferTypeDef uart8_buffer = {.state = UART_STATE_IDLE};
 char uart_send_buffer[UART_BUFFER_SIZE];
 /* USER CODE END 0 */
 
@@ -37,6 +37,9 @@ UART_HandleTypeDef huart8;
 UART_HandleTypeDef huart2;
 UART_HandleTypeDef huart3;
 UART_HandleTypeDef huart6;
+
+
+int integer_data_buffer[4];
 
 /* UART7 init function */
 void MX_UART7_Init(void)
@@ -404,10 +407,10 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
   */
 void UART_InterruptionInit(void) {
     HAL_UART_Receive_IT(&huart2, &uart2_buffer.byte, 1);
-    HAL_UART_Receive_IT(&huart3, &uart3_buffer.byte, 1);
-    HAL_UART_Receive_IT(&huart6, &uart6_buffer.byte, 1);
-    HAL_UART_Receive_IT(&huart7, &uart7_buffer.byte, 1);
-    HAL_UART_Receive_IT(&huart8, &uart8_buffer.byte, 1);
+//    HAL_UART_Receive_IT(&huart3, &uart3_buffer.byte, 1);
+//    HAL_UART_Receive_IT(&huart6, &uart6_buffer.byte, 1);
+//    HAL_UART_Receive_IT(&huart7, &uart7_buffer.byte, 1);
+//    HAL_UART_Receive_IT(&huart8, &uart8_buffer.byte, 1);
 }
 
 /**
@@ -435,7 +438,35 @@ void UART_TransmitString(UART_HandleTypeDef *uartHandle, char *format, ...) {
   * @retval void
   */
 void UART_TransmitData(UART_HandleTypeDef *uartHandle, uint8_t *data, uint16_t len) {
-    HAL_UART_Transmit(uartHandle, data, len * 8, 0xFFFF);
+    HAL_UART_Transmit(uartHandle, data, len, 0xFFFF);
+}
+
+/**
+  * @brief Service the interruption of all uart
+  * @param void
+  * @retval void
+  **/
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+    if (huart->Instance == USART2)
+    {
+        if (uart2_buffer.state == UART_STATE_IDLE) {
+            if (uart2_buffer.byte == '[') {
+                uart2_buffer.pointer = 0;
+                uart2_buffer.buffer[uart2_buffer.pointer++] = uart2_buffer.byte;
+                uart2_buffer.state++;
+                LED_Reverse(led_green + 2);
+            }
+        } else if (uart2_buffer.state == 1) {
+            uart2_buffer.buffer[uart2_buffer.pointer++] = uart2_buffer.byte;
+            if (uart2_buffer.byte == ']') {
+                uart2_buffer.buffer[uart2_buffer.pointer++] = '\0';
+                LED_Reverse(led_green + 1);
+                uart2_buffer.state = UART_STATE_BUSY;
+            }
+        }
+        HAL_UART_Receive_IT(huart, &uart2_buffer.byte, 1);
+    }
 }
 
 /**
@@ -445,8 +476,21 @@ void UART_TransmitData(UART_HandleTypeDef *uartHandle, uint8_t *data, uint16_t l
   */
 void UART_Service(void) {
     if (uart2_buffer.state == UART_STATE_BUSY) {
+        sscanf(
+            (const char*)(uart2_buffer.buffer),
+            "[%d,%d,%d,%d]",
+            integer_data_buffer + 0,
+            integer_data_buffer + 1,
+            integer_data_buffer + 2,
+            integer_data_buffer + 3
+        );
+        motors[0].target_speed = (int16_t)integer_data_buffer[0];
+        motors[1].target_speed = (int16_t)integer_data_buffer[1];
+        motors[2].target_speed = (int16_t)integer_data_buffer[2];
+        motors[3].target_speed = (int16_t)integer_data_buffer[3];
         uart2_buffer.state = UART_STATE_IDLE;
     }
+    /*
     if (uart3_buffer.state == UART_STATE_BUSY) {
         uart3_buffer.state = UART_STATE_IDLE;
     }
@@ -459,5 +503,6 @@ void UART_Service(void) {
     if (uart8_buffer.state == UART_STATE_BUSY) {
         uart8_buffer.state = UART_STATE_IDLE;
     }
+     */
 }
 /* USER CODE END 1 */

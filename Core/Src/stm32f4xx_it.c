@@ -57,6 +57,7 @@
 /* External variables --------------------------------------------------------*/
 extern PCD_HandleTypeDef hpcd_USB_OTG_FS;
 extern CAN_HandleTypeDef hcan1;
+extern TIM_HandleTypeDef htim6;
 extern UART_HandleTypeDef huart7;
 extern UART_HandleTypeDef huart8;
 extern UART_HandleTypeDef huart2;
@@ -240,23 +241,8 @@ void USART2_IRQHandler(void)
   /* USER CODE END USART2_IRQn 0 */
   HAL_UART_IRQHandler(&huart2);
   /* USER CODE BEGIN USART2_IRQn 1 */
-    /*
-    if (uart2_buffer.state == UART_STATE_IDLE) {
-        if (uart2_buffer.byte == '(') {
-            uart2_buffer.pointer = 0;
-            uart2_buffer.buffer[uart2_buffer.pointer++] = uart2_buffer.byte;
-            uart2_buffer.state++;
-        }
-    } else if (uart2_buffer.state == 1) {
-        uart2_buffer.buffer[uart2_buffer.pointer++] = uart2_buffer.byte;
-        if (uart2_buffer.byte == ')') {
-            uart2_buffer.buffer[uart2_buffer.pointer++] = '\0';
-            uart2_buffer.state = UART_STATE_BUSY;
-        }
-    }
-    */
-    WitSerialDataIn(uart2_buffer.byte);
-    HAL_UART_Receive_IT(&huart2, &uart2_buffer.byte, 1);
+
+
   /* USER CODE END USART2_IRQn 1 */
 }
 
@@ -270,9 +256,22 @@ void USART3_IRQHandler(void)
   /* USER CODE END USART3_IRQn 0 */
   HAL_UART_IRQHandler(&huart3);
   /* USER CODE BEGIN USART3_IRQn 1 */
-    //WitSerialDataIn(uart3_buffer.byte);
-    HAL_UART_Receive_IT(&huart3, &uart3_buffer.byte, 1);
+
   /* USER CODE END USART3_IRQn 1 */
+}
+
+/**
+  * @brief This function handles TIM6 global interrupt, DAC1 and DAC2 underrun error interrupts.
+  */
+void TIM6_DAC_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM6_DAC_IRQn 0 */
+
+  /* USER CODE END TIM6_DAC_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim6);
+  /* USER CODE BEGIN TIM6_DAC_IRQn 1 */
+
+  /* USER CODE END TIM6_DAC_IRQn 1 */
 }
 
 /**
@@ -299,7 +298,7 @@ void USART6_IRQHandler(void)
   /* USER CODE END USART6_IRQn 0 */
   HAL_UART_IRQHandler(&huart6);
   /* USER CODE BEGIN USART6_IRQn 1 */
-    HAL_UART_Receive_IT(&huart6, &uart6_buffer.byte, 1);
+
   /* USER CODE END USART6_IRQn 1 */
 }
 
@@ -313,7 +312,7 @@ void UART7_IRQHandler(void)
   /* USER CODE END UART7_IRQn 0 */
   HAL_UART_IRQHandler(&huart7);
   /* USER CODE BEGIN UART7_IRQn 1 */
-    HAL_UART_Receive_IT(&huart7, &uart7_buffer.byte, 1);
+
   /* USER CODE END UART7_IRQn 1 */
 }
 
@@ -327,7 +326,7 @@ void UART8_IRQHandler(void)
   /* USER CODE END UART8_IRQn 0 */
   HAL_UART_IRQHandler(&huart8);
   /* USER CODE BEGIN UART8_IRQn 1 */
-    HAL_UART_Receive_IT(&huart8, &uart8_buffer.byte, 1);
+
   /* USER CODE END UART8_IRQn 1 */
 }
 

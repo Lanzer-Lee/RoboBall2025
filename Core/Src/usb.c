@@ -74,8 +74,8 @@ void USB_Service(void) {
             int current[4];
             sscanf((const char *) (usb.receive_buffer), "(M,%d,%d,%d,%d)", current, current + 1, current + 2,
                    current + 3);
-            CAN1_cmd((int16_t) (current[0]), (int16_t) (current[1]), (int16_t) (current[2]),
-                          (int16_t) (current[3]));
+            set_motor_current((int16_t) (current[0]), (int16_t) (current[1]), (int16_t) (current[2]),
+                              (int16_t) (current[3]));
             USB_TransmitString("Motor velocity: %d, %d, %d, %d", current[0], current[1], current[2], current[3]);
         }
         usb.state = UART_STATE_IDLE;

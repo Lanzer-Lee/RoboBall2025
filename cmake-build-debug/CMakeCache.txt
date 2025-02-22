@@ -124,7 +124,7 @@ CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/proj2
 CMAKE_LINKER:FILEPATH=D:/STM32CubeMx/gcc-arm-none-eabi/bin/arm-none-eabi-ld.exe
 
 //make program
-CMAKE_MAKE_PROGRAM:FILEPATH=D:/PROGRA~1/JetBrains/CLion 2024.1/bin/ninja/win/x64/ninja.exe
+CMAKE_MAKE_PROGRAM:FILEPATH=D:/Program Files/JetBrains/CLion 2024.1/bin/ninja/win/x64/ninja.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.

@@ -1,26 +1,20 @@
-//
-// Created by 王浩宇 on 2024/12/4.
-//
-
-#include "pid.h"
-//
-// Created on 2024/11/28.
-
 #include "pid.h"
 
-#define LimitMax(input, max)   \
-{                          \
-if (input > max)       \
-{                      \
-input = max;       \
-}                      \
-else if (input < -max) \
-{                      \
-input = -max;      \
-}                      \
+
+#define LimitMax(input, max)    \
+{                               \
+    if (input > max)            \
+    {                           \
+        input = max;            \
+    }                           \
+    else if (input < -max)      \
+    {                           \
+        input = -max;           \
+    }                           \
 }
 
-void PID_init(pid_type_def *pid, uint8_t mode, const fp32 PID[3], fp32 max_out, fp32 max_iout)
+
+void PID_init(pid_type_def *pid, uint8_t mode, const float PID[3], float max_out, float max_iout)
 {
     if (pid == NULL || PID == NULL)
     {
@@ -35,6 +29,7 @@ void PID_init(pid_type_def *pid, uint8_t mode, const fp32 PID[3], fp32 max_out, 
     pid->Dbuf[0] = pid->Dbuf[1] = pid->Dbuf[2] = 0.0f;
     pid->error[0] = pid->error[1] = pid->error[2] = pid->Pout = pid->Iout = pid->Dout = pid->out = 0.0f;
 }
+
 fp32 PID_calc(pid_type_def *pid, fp32 ref, fp32 set)
 {
     if (pid == NULL)

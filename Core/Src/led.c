@@ -24,3 +24,8 @@ void LED_On(LED_TypeDef* led)
 {
     HAL_GPIO_WritePin(led->gpio, led->pin, GPIO_PIN_RESET);
 }
+
+void LED_Reverse(LED_TypeDef* led)
+{
+    HAL_GPIO_TogglePin(led->gpio, led->pin);
+}

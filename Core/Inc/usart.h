@@ -32,6 +32,8 @@ extern "C" {
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
+#include "CAN_Receive.h"
+#include "led.h"
 /* USER CODE END Includes */
 
 extern UART_HandleTypeDef huart7;
@@ -45,7 +47,7 @@ extern UART_HandleTypeDef huart3;
 extern UART_HandleTypeDef huart6;
 
 /* USER CODE BEGIN Private defines */
-#define UART_BUFFER_SIZE   100
+#define UART_BUFFER_SIZE   200
 #define UART_STATE_IDLE     0
 #define UART_STATE_BUSY     255
 typedef struct

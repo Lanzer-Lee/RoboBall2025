@@ -20,6 +20,7 @@
 #include "main.h"
 #include "can.h"
 #include "spi.h"
+#include "tim.h"
 #include "usart.h"
 #include "usb_device.h"
 #include "gpio.h"
@@ -95,18 +96,13 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_UART7_Init();
-  MX_UART8_Init();
   MX_USART2_UART_Init();
-  MX_USART3_UART_Init();
-  MX_USART6_UART_Init();
   MX_USB_DEVICE_Init();
   MX_SPI5_Init();
   MX_CAN1_Init();
+  MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
     UART_InterruptionInit();
-    MPU_DeviceInit();
-    MPU_InitQuaternion();
     LED_On(led_green + 0);
     LED_On(led_green + 2);
     LED_On(led_green + 4);
@@ -115,26 +111,16 @@ int main(void)
     LED_Off(led_green + 3);
     LED_Off(led_green + 5);
     LED_Off(led_green + 7);
-    HAL_Delay(1000);
-    LED_On(led_green + 1);
-    LED_On(led_green + 3);
-    LED_On(led_green + 5);
-    LED_On(led_green + 7);
-    LED_Off(led_green + 0);
-    LED_Off(led_green + 2);
-    LED_Off(led_green + 4);
-    LED_Off(led_green + 6);
-    //WIT_Init(&wit_imu);
-    USB_TransmitString("device success init.");
-    // UART_TransmitString(&huart2, (uint8_t *) "device success init.");
+    HAL_TIM_Base_Start_IT(&htim6);
+    UART_TransmitString(&huart2, "device success init.");
     //电机转动
-    int16_t speed_set1 = 2000;
-    int16_t speed_set2 = 0;
-    int16_t speed_set3 = 0;
-    int16_t speed_set4 = 0;
+    // int16_t speed_set1 = 2000;
+    // int16_t speed_set2 = 0;
+    // int16_t speed_set3 = 0;
+    // int16_t speed_set4 = 0;
 
-    fp32 PID_M2006[3]={5.8f,0.02f,1.1f};
-    PID_init(&PID_Speed_M2006,PID_POSITION,PID_M2006,16384,100);
+    // fp32 PID_M2006[3]={5.8f,0.02f,1.1f};
+    // PID_init(&PID_Speed_M2006,PID_POSITION,PID_M2006,16384,100);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -143,9 +129,6 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-        USB_Service();
-        UART_Service();
-        MPU_Update();
     }
   /* USER CODE END 3 */
 }

@@ -15,26 +15,28 @@ enum PID_MODE
 
 typedef struct
 {
-    uint8_t mode;
-    //PID 参数
-    fp32 Kp;
-    fp32 Ki;
-    fp32 Kd;
+    uint8_t mode;   // PID_POSITION or PID_DELTA
 
-    fp32 max_out;  //
-    fp32 max_iout; //
+    float Kp;       // PID parameters Kp
+    float Ki;       // PID parameters Ki
+    float Kd;       // PID parameters Kd
 
-    fp32 set;
-    fp32 fdb;
+    float max_out;  //
+    float max_iout; //
 
-    fp32 out;
-    fp32 Pout;
-    fp32 Iout;
-    fp32 Dout;
-    fp32 Dbuf[3];  //
-    fp32 error[3]; //
+    float set;
+    float fdb;
+
+    float out;
+    float Pout;
+    float Iout;
+    float Dout;
+    float Dbuf[3];  //
+    float error[3]; //
 
 } pid_type_def;
+
+
 extern void PID_init(pid_type_def *pid, uint8_t mode, const fp32 PID[3], fp32 max_out, fp32 max_iout);
 extern fp32 PID_calc(pid_type_def *pid, fp32 ref, fp32 set);
 
