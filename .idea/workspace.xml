@@ -20,10 +20,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0921be81-4283-4c41-97e4-161dbd62c4d0" name="更改" comment="update ROS2 interface">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Core/Src/led.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proj2.elf.dir/Core/Src/led.c.obj" afterDir="false" />
-    </list>
+    <list default="true" id="0921be81-4283-4c41-97e4-161dbd62c4d0" name="更改" comment="update ROS2 interface" />
     <list id="61a78e77-d378-4f4c-9c18-dacb01bf5c6c" name="王浩宇 进行的更改" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +156,7 @@
       <workItem from="1740062901441" duration="659000" />
       <workItem from="1740105892375" duration="3720000" />
       <workItem from="1740124799340" duration="12776000" />
-      <workItem from="1740190397668" duration="6001000" />
+      <workItem from="1740190397668" duration="6300000" />
     </task>
     <task id="LOCAL-00001" summary="update IMU and USB">
       <option name="closed" value="true" />
@@ -185,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740207905628</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update ROS2 interface">
+      <option name="closed" value="true" />
+      <created>1740208779976</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740208779976</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
